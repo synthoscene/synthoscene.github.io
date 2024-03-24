@@ -38,11 +38,39 @@
             color: #740909; /* Farbcode für Rot */
             text-decoration: none; /* Entfernt die Unterstreichung der Links */
         }
+        /* Stil für das Bild */
+        img {
+            position: absolute; /* Absolute Positionierung */
+            opacity: 0.5; /* Transparenz auf 50% */
+            z-index: 0; /* Hinter dem Text */
+            /* Hier können Sie die Größe des Bildes anpassen */
+            width: 200px;
+            height: 200px;
+        }
     </style>
 </head>
     </style>
 </head>
 <body>
+    <!-- Hier wird das zufällige Bild eingefügt -->
+    <img id="randomImage" src="" alt="Portraitfoto">
+
+    <script>
+        // Liste aller Bild-URLs im Repository
+        var imageUrls = [
+            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/main/aiportraits/image1.jpg",
+            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/main/aiportraits/image2.jpg",
+            // Fügen Sie hier weitere Bild-URLs hinzu, falls vorhanden
+        ];
+
+        // Zufällig ein Bild auswählen
+        var randomIndex = Math.floor(Math.random() * imageUrls.length);
+        var randomImageUrl = imageUrls[randomIndex];
+
+        // Das ausgewählte Bild in das <img> -Tag einfügen
+        document.getElementById("randomImage").src = randomImageUrl;
+    </script>
+    
     <header>
         <h1>D I A N A   K O Z A C H E K</h1>
         <p>Futures Studies & Computer Science graduate
