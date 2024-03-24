@@ -41,7 +41,7 @@
         /* Stil für das Bild */
         img {
             position: absolute; /* Absolute Positionierung */
-            opacity: 0.6; /* Transparenz auf 60% */
+            opacity: 0.5; /* Transparenz auf 50% */
             z-index: -1; /* Hinter dem Text */
             /* Hier können Sie die Größe des Bildes anpassen */
             width: 200px;
@@ -142,22 +142,17 @@
             <li><a href="https://www.hiig.de/wp-content/uploads/2019/11/IGF-Statements-Critical-Voices-WEB.pdf">Against Prediction - The Power of Imagination in the Age of Codes and Numbers</a>, Internet Governance Forum 2019: Many Worlds, Many Nets, Many Visions, Alexander von Humboldt Institute for Internet and Society, Hans Bredow Institute, 2019</li>
         </ul>
 
-        <form action="mailto:kozachekdiana@gmail.com" method="post" enctype="text/plain">
-            <label for="message">Text me:</label><br>
-            <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
-            <input type="submit" value="send">
-        </form>
     </main>
     </main>
     
     <footer>
         <p>&copy; 2024 Diana Kozachek.</p>
         <form id="emailForm" action="mailto:kozachekdiana@gmail.com" method="post" enctype="text/plain" onsubmit="reloadPage()">
-            <label for="senderEmail">Ihre E-Mail-Adresse:</label><br>
+            <label for="senderEmail">e-mail:</label><br>
             <input type="email" id="senderEmail" name="senderEmail" required><br>
-            <label for="message">Ihre Nachricht:</label><br>
+            <label for="message">text:</label><br>
             <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
-            <input type="submit" value="Senden" style="background-color: #f20000; color: #ffffff;">
+            <input type="submit" value="send" style="background-color: #f20000; color: #ffffff;">
         </form>
     </footer>
 </body>
