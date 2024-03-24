@@ -148,9 +148,23 @@
             <input type="submit" value="send">
         </form>
     </main>
+    </main>
     
     <footer>
         <p>&copy; 2024 Diana Kozachek.</p>
+        <form id="emailForm" action="mailto:kozachekdiana@gmail.com" method="post" enctype="text/plain" onsubmit="reloadPage()">
+            <label for="senderEmail">Ihre E-Mail-Adresse:</label><br>
+            <input type="email" id="senderEmail" name="senderEmail" required><br>
+            <label for="message">Ihre Nachricht:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+            <input type="submit" value="Senden" style="background-color: #f20000; color: #ffffff;">
+        </form>
     </footer>
 </body>
 </html>
+
+<script>
+    function reloadPage() {
+        location.reload();
+    }
+</script>
