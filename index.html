@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIANA KOZACHEK</title>
     <style>
-        body {
-            font-family: "Space Mono", Space Mono, monospace;
-            background: linear-gradient(to bottom,  #2b020a 50%,  #2b020a 50%);
+        body {            font-family: "Space Mono", monospace;
+            background: linear-gradient(to bottom, #2b020a 50%, #2b020a 50%);
             color: #edf2f2;
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            display: flex;
+            justify-content: center; /* Zentriert den Hauptinhalt horizontal */
         }
-        header, main, footer {
+        /* Begrenzung des Inhaltsbereichs */
+        .content-wrapper {
+            width: 33%; /* Setzt die Breite auf ein Drittel der Seite */
+            max-width: 600px; /* Maximale Breite für größere Bildschirme */
+            margin-left: 50px; /* Abstand von links */
             padding: 20px;
-            margin-bottom: 20px;
+            box-sizing: border-box;
         }
         h1, h2 {
             font-family: "Playfair Display", serif; /* Spezielle Schriftart für Titel */
