@@ -5,65 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIANA KOZACHEK</title>
     <style>
-        body {            font-family: "Space Mono", monospace;
+        body {
+            font-family: "Space Mono", monospace;
             background: linear-gradient(to bottom, #2b020a 50%, #2b020a 50%);
             color: #edf2f2;
             margin: 0;
             padding: 0;
             line-height: 1.6;
             display: flex;
-            justify-content: center; /* Zentriert den Hauptinhalt horizontal */
+            justify-content: center;
         }
-        /* Begrenzung des Inhaltsbereichs */
         .content-wrapper {
-            width: 33%; /* Setzt die Breite auf ein Drittel der Seite */
-            max-width: 600px; /* Maximale Breite für größere Bildschirme */
-            margin-left: 50px; /* Abstand von links */
+            display: flex;
+            max-width: 1200px;
             padding: 20px;
-            box-sizing: border-box;
+            gap: 20px;
         }
-        h1, h2 {
-            font-family: "Playfair Display", serif; /* Spezielle Schriftart für Titel */
-            font-size: 24px;
-            margin-bottom: 10px;
+        .column {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
         }
         h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 24px;
             color: #9BB3FF;
+            text-align: center;
         }
         h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 20px;
             color: #edf2f2;
+            margin-bottom: 10px;
         }
         p {
             margin-bottom: 10px;
         }
-        form {
-            margin-top: 20px;
-        }
-         /* Link-Stil */
         a {
-            color: #9BB3FF; /* Farbcode für blau */
-            text-decoration: none; /* Entfernt die Unterstreichung der Links */
-            font-weight: bold; 
+            color: #9BB3FF;
+            text-decoration: none;
+            font-weight: bold;
         }
-        /* Stil für das Bild */
         img {
-            position: absolute; /* Absolute Positionierung */
-            opacity: 0.55; /* Transparenz auf 55% */
-            z-index: -1; /* Hinter dem Text */
-            /* Hier können Sie die Größe des Bildes anpassen */
+            position: absolute;
+            opacity: 0.55;
+            z-index: -1;
             width: 400px;
             height: 400px;
         }
     </style>
 </head>
-    </style>
-</head>
 <body>
-    <!-- Hier wird das zufällige Bild eingefügt -->
     <img id="randomImage" src="" alt="AI_SELFIE">
-
     <script>
-        // Liste aller Bild-URLs im Repository
         var imageUrls = [
             "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/hzrykl20.jpg",
             "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/inde2x.png",
@@ -72,121 +66,89 @@
             "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/sd19.png",
             "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/sd27.png",
             "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/sd4.png",
-            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/sd5.png",
-            // Hier füge ich weitere Bild-URLs hinzu, falls vorhanden
+            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/sd5.png"
         ];
-
-        // Zufällig ein Bild auswählen
         var randomIndex = Math.floor(Math.random() * imageUrls.length);
-        var randomImageUrl = imageUrls[randomIndex];
-
-        // Das ausgewählte Bild in das <img> -Tag einfügen
-        document.getElementById("randomImage").src = randomImageUrl;
+        document.getElementById("randomImage").src = imageUrls[randomIndex];
     </script>
-    
+
     <header>
         <h1>D I A N A &nbsp; K O Z A C H E K</h1>
-        <p>AI Researcher. Technologist. Writer. 
-            Interested in Human-AI Interaction in NLP Applications and Evaluation Metrics for Creative Text Generation Tasks in LLMs. 
-            Applied Researcher. Volkswagen Group China. Fraunhofer Institute ISI & IPK Alumni. Futures Studies & Computer Science Graduate. 
-            Currently in Beijing, soon in Switzerland.
-            Contact: kozachekdiana(at)gmail(dot)com</p>
-        
-            <ul>
-                <p><a href="https://orcid.org/0000-0001-8302-1007" target="_blank">ORCID</a></p>
-                <p><a href="https://github.com/koizachek"target="_blank">GitHub</a></p>
-                <p><a href="https://www.researchgate.net/profile/Diana-Kozachek/"target="_blank">ResearchGate</a></p>
-                <p><a href="https://www.instagram.com/koizachek/" target="_blank">Instagram</a></p>
-                <p><a href="https://www.linkedin.com/in/diana-kozachek/" target="_blank">LinkedIn</a></p>
-            </ul>
     </header>
-    
-    <main>
-        <h2>SELECTED PROFESSIONAL EXPERIENCES</h2>
 
-        <p><p>Volkswagen Group China, Research and Development Center V-Labs, Beijing, China.<br>
-        Applied Researcher. Implementing LLMs into decision-making processes</p>
-        
-        <p>Fraunhofer Institute for Innovation and Systems Research (ISI), Karlsruhe, Germany.<br>
-        Applied Researcher in the Foresight Competence Center, February 21 - August 23</p>
+    <div class="content-wrapper">
+        <!-- Linke Spalte -->
+        <div class="column">
+            <h2>About</h2>
+            <p>AI Researcher. Technologist. Writer. Interested in Human-AI Interaction in NLP Applications and Evaluation Metrics for Creative Text Generation Tasks in LLMs. Applied Researcher. Volkswagen Group China. Fraunhofer Institute ISI & IPK Alumni. Futures Studies & Computer Science Graduate. Currently in Beijing, soon in Switzerland. Contact: kozachekdiana(at)gmail(dot)com</p>
+            <ul>
+                <li><a href="https://orcid.org/0000-0001-8302-1007" target="_blank">ORCID</a></li>
+                <li><a href="https://github.com/koizachek" target="_blank">GitHub</a></li>
+                <li><a href="https://www.researchgate.net/profile/Diana-Kozachek/" target="_blank">ResearchGate</a></li>
+                <li><a href="https://www.instagram.com/koizachek/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/diana-kozachek/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
 
-        <p>National Taipei University of Technology (NTUT), Taipei, Taiwan.<br>
-        Graduate Research Assistant in the Metaverse Research Lab, July 22 - October 22</p>
+        <!-- Mittlere Spalte -->
+        <div class="column">
+            <h2>Selected Professional Experiences</h2>
+            <p>Volkswagen Group China, Research and Development Center V-Labs, Beijing, China.<br>Applied Researcher. Implementing LLMs into decision-making processes.</p>
+            <p>Fraunhofer Institute for Innovation and Systems Research (ISI), Karlsruhe, Germany.<br>Applied Researcher in the Foresight Competence Center, February 21 - August 23.</p>
+            <p>National Taipei University of Technology (NTUT), Taipei, Taiwan.<br>Graduate Research Assistant in the Metaverse Research Lab, July 22 - October 22.</p>
+            <p>Fraunhofer Institute for Production Systems and Design Technology (IPK), Berlin, Germany.<br>Research Intern in the Virtual Product Creation Division, May 20 – February 21.</p>
+            <p>Motif Institute for Digital Culture, Berlin, Germany.<br>Researcher and Strategist, July 19 – June 20.</p>
+            <p>Scholz and Friends Group GmbH, Berlin, Germany.<br>Digital Concept Developer, August 17 - July 19.</p>
 
-        <p>Fraunhofer Institute for Production Systems and Design Technology (IPK), Berlin, Germany.<br>
-        Research Intern in the Virtual Product Creation Division, May 20 – February 21</p>
+            <h2>Education</h2>
+            <p>Freie University, Berlin, Germany. Department of Psychology<br>Master of Arts: Future Studies and Computer Science.</p>
+            <p>Fern University, Hagen, Germany. Department of Mathematics and Computer Science<br>Bachelor of Science: Mathematics and Computer Science.</p>
+            <p>University of the Arts, Berlin, Germany. Department of Design<br>Bachelor of Arts: Communications in Social and Economic Contexts.</p>
+        </div>
 
-        <p>Motif Institute for Digital Culture, Berlin, Germany.<br>
-        Researcher and Strategist, July 19 – June 20</p>
+        <!-- Rechte Spalte -->
+        <div class="column">
+            <h2>Awards and Scholarships</h2>
+            <ul>
+                <li>DAAD Language and Practice in China (16-month Fellowship) August 2023</li>
+                <li>AI Anarchies Autumn School (Fellowship) October 2022</li>
+                <li>DAAD Taiwan Summer Institute Program (4-month Scholarship) July 2022</li>
+                <li>New European Bauhaus Rising Stars (shortlisted) European Commission August 2021</li>
+            </ul>
 
-        <p>Scholz and Friends Group GmbH Berlin, Germany.<br>
-        Digital Concept Developer, August 17 - July 19</p>
+            <h2>Scientific Publications</h2>
+            <ul>
+                <li><a href="https://dx.doi.org/10.2139/ssrn.4767192">[PREPRINT] What Do European Futures Look Like According to Fine-Tuned GPT-3, Prompt-Tuned GPT-3.5, and Few-Shot Prompted GPT-4?</a></li>
+                <li><a href="https://dl.acm.org/doi/10.1145/3591196.3596827">Investigating the Perception of the Future in GPT-3, -3.5 and GPT-4</a></li>
+                <li><a href="https://link.springer.com/chapter/10.1007/978-3-031-35599-8_16">Evaluating the Outcome of Collaborative VR Mind Mapping Sessions</a></li>
+                <li><a href="https://ieeexplore.ieee.org/document/9582644">How Pedestrians Perceive Autonomous Buses</a></li>
+            </ul>
 
-        <h2>EDUCATION</h2>
-        <p><p>Freie University, Berlin, Germany. Department of Psychology<br>
-        Master of Arts: Future Studies and Computer Science</p>
-        
-        <p>Fern University, Hagen, Germany. Department of Mathematics and Computer Science<br>
-        Bachelor of Science: Mathematics and Computer Science</p>
+            <h2>Essays and Articles</h2>
+            <ul>
+                <li><a href="http://texturen.net/">TOKIO - Digitale Interfaces im Stadtkörper</a>, texturen Nr. 8, UdK Verlag, 2021</li>
+                <li><a href="https://www.hiig.de/wp-content/uploads/2019/11/IGF-Statements-Critical-Voices-WEB.pdf">Against Prediction - The Power of Imagination</a>, Internet Governance Forum 2019</li>
+            </ul>
 
-        <p>University of the Arts, Berlin, Germany. Department of Design<br>
-        Bachelor of Arts: Communications in Social and Economic Contexts</p>
+            <h2>Hard Skills</h2>
+            <ul>
+                <li>Data Analysis with Python (advanced), libraries: BERT, NLTK, TensorFlow</li>
+                <li>Data Visualization with Tableau (intermediate)</li>
+                <li>Network Study with Gephi (intermediate)</li>
+                <li>User Experience Prototyping with Adobe XD</li>
+                <li>Languages: German (native), English (C1), Russian (fluent), Mandarin Chinese (HSK4), French (B1)</li>
+            </ul>
+        </div>
+    </div>
 
-        <h2>AWARDS AND SCHOLARSHIPS</h2>
-        <p>
-        <ul>
-            <li>DAAD Language and Practice in China (16-month Fellowship) August 2023 Fully funded 10 months of intense Chinese language learning at the Beijing Foreign Studies University, as well as 6 months of industry work in Shanghai in a German-Chinese company</li>
-            <li><a href="https://aianarchies.net/school">AI Anarchies Autumn School</a> (Fellowship) October 2022 The transdisciplinary School at Akademie der Künste in Berlin curated by Maya Indira Ganesh and Nora N. Khan from Oxford University, brought together global communities of artists, scholars, cultural producers, focusing on creating new modes of thinking on the topic of AI Ethics</li>
-            <li>DAAD Taiwan Summer Institute Program (4-month Scholarship) July 2022 Fully funded 4 month research scholarship at the National Taipei University of Technology</li>
-            <li>New European Bauhaus Rising Stars (shortlisted) European Commission August 2021 I conceptualized and implemented the ongoing participatory project “feminist futures” into a digital plattform. Feminist Futures aims to co-create digital, inclusive futures.</li>
-        </ul>
-
-        <h2>SCIENTIFIC PUBLICATIONS</h2>
-        <p>
-        <ul>
-            <li><a href="https://dx.doi.org/10.2139/ssrn.4767192"> [PREPRINT] What Do European Futures Look Like According to Fine-Tuned Gpt-3, Prompt-Tuned Gpt-3.5, and Few-Shot Prompted Gpt-4?</a> Artificial Intelligence eJournal, May 2024, DOI: 10.2139/ssrn.4767192</li>
-            <li><a href="https://dl.acm.org/doi/10.1145/3591196.3596827">Investigating the Perception of the Future in GPT-3, -3.5 and GPT-4,</a> C&C '23: Proceedings of the 15th Conference on Creativity and Cognition, June 2023, p. 282–287, DOI: 10.1145/3591196.3596827</li>
-            <li><a href="https://link.springer.com/chapter/10.1007/978-3-031-35599-8_16">Evaluating the Outcome of Collaborative VR Mind Mapping Sessions with Sentiment Analysis and Emotional Intelligence</a>, International Conference on Human-Computer Interaction HCII 2023: Human-Computer Interaction, p. 245–263, DOI: 10.1007/978-3-031-35599-8_16</li>
-            <li><a href="https://ieeexplore.ieee.org/document/9582644">How Pedestrians Perceive Autonomous Buses: Evaluating Visual Signals</a>, IEEE International Conference on Human-Machine Systems, ICHMS, June 2021, DOI: 10.1109/ichms53169.2021.9582644</li>
-        </ul>
-
-        <h2>ESSAYS AND ARTICLES</h2>
-        <p>
-        <ul>
-            <li><a href="http://texturen.net/">TOKIO - Digitale Interfaces im Stadtkörper</a>, texturen Nr. 8, UdK Verlag, 2021, p. 112-126, ISBN-10, ‎3832554653</li>
-            <li><a href="https://www.hiig.de/wp-content/uploads/2019/11/IGF-Statements-Critical-Voices-WEB.pdf">Against Prediction - The Power of Imagination in the Age of Codes and Numbers</a>, Internet Governance Forum 2019: Many Worlds, Many Nets, Many Visions, Alexander von Humboldt Institute for Internet and Society, Hans Bredow Institute, 2019</li>
-        </ul>
-
-        
-        <h2>HARD SKILLS</h2>
-        <p>
-        <ul>
-            <li>Data Analysis with Python (advanced) most used specialized libraries: BERT, NLTK and Tensorflow, regularly used libraries: pandas, numpy, matplotlib, sklearn. Other data analysis software: Excel (intermediate), C++ (basic), SQL (basic), R (basic), SPSS (basic)</li>
-            <li>Data Visualization with Tableau (intermediate) and</li>
-            <li>Network Study and Visualization with Gephi (intermediate) and</li>
-            <li>User Experience Prototyping with Adobe XD</li>
-            <li>Languages: German (native), English (C1), Russian (fluent), Mandarin Chinese (HSK4), French (B1)</li>
-        </ul>
-
-    </main>
-    </main>
-    
     <footer>
         <form id="emailForm" action="mailto:kozachekdiana@gmail.com" method="post" enctype="text/plain" onsubmit="reloadPage()">
             <label for="senderEmail">e-mail:</label><br>
             <input type="email" id="senderEmail" name="senderEmail" required><br>
-            <label for="message">text:</label><br>
+            <label for="message">Message:</label><br>
             <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
-            <input type="submit" value="send" style="background-color: #022b23; color: #ffffff;">
+            <input type="submit" value="Send">
         </form>
-        
-        <p>&copy; 2024 Diana Kozachek.</p>
     </footer>
 </body>
 </html>
-
-<script>
-    function reloadPage() {
-        location.reload();
-    }
-</script>
