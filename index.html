@@ -6,12 +6,13 @@
     <title>DIANA KOZACHEK</title>
     <style>
         body {
-            padding: 0 30px; /* Abstand von 20px links und rechts */
-            font-family: "Courier New", Courier, monospace;
-            background: linear-gradient(to bottom, #2b020a 50%, #2b020a 50%);
-            color: #edf2f2;
             margin: 0;
-            padding: 0;
+            font-family: "Courier New", Courier, monospace;
+            background-size: cover; /* Hintergrund bildschirmfüllend */
+            background-position: center; /* Hintergrund zentrieren */
+            background-repeat: no-repeat; /* Kein Wiederholen */
+            transition: background 0.5s ease-in-out; /* Sanfter Übergang */
+            color: #edf2f2;
             line-height: 1.6;
         }
         header, main, footer {
@@ -54,30 +55,29 @@
     </style>
 </head>
 <body>
-    <!-- Hier wird das zufällige Bild eingefügt -->
-    <img id="randomImage" src="" alt="AI_SELFIE">
 
     <script>
         // Liste aller Bild-URLs im Repository
         var imageUrls = [
-            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/hzrykl20.jpg",
-            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/inde2x.png",
-            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/sd16.png",
-            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/sd17.png",
-            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/sd19.png",
-            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/sd27.png",
-            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/sd4.png",
-            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/sd5.png",
+            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/background.ppg",
+            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/background2.jng",
+            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/background3.JPG",
+            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/background4.JPG",
+            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/background5.JPG",
+            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/background6.JPG",
+            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/background7.JPG",
+            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/background8.JPG",
             // Hier füge ich weitere Bild-URLs hinzu, falls vorhanden
         ];
 
         // Zufällig ein Bild auswählen
         var randomIndex = Math.floor(Math.random() * imageUrls.length);
         var randomImageUrl = imageUrls[randomIndex];
-
-        // Das ausgewählte Bild in das <img> -Tag einfügen
-        document.getElementById("randomImage").src = randomImageUrl;
+        
+        // Hintergrundbild für den Body setzen
+        document.body.style.backgroundImage = `url('${randomImageUrl}')`;
     </script>
+
     
     <header>
         <h1>D I A N A &nbsp; K O Z A C H E K</h1>
