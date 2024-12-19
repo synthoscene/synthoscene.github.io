@@ -78,7 +78,26 @@
 </head>
     </style>
 </head>
-<body>    
+<body>
+
+    <script>
+        // Liste aller Bild-URLs im Repository
+        var imageUrls = [
+            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/background3.JPG",
+            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/background5.JPG",
+            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/background6.JPG",
+            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/background7.JPG",
+            "https://raw.githubusercontent.com/koizachek/koizachek.github.io/aiportraits/background8.JPG",
+            // Hier füge ich weitere Bild-URLs hinzu, falls vorhanden
+        ];
+
+        // Zufällig ein Bild auswählen
+        var randomIndex = Math.floor(Math.random() * imageUrls.length);
+        var randomImageUrl = imageUrls[randomIndex];
+        
+        // Hintergrundbild für den Body setzen
+        document.body.style.backgroundImage = `url('${randomImageUrl}')`;
+    </script>
     <header>
         <h1>DIANA &nbsp; KOZACHEK</h1>
         <p>AI Researcher. Technologist. Writer. Interested in Human-AI Interaction in NLP Applications and Evaluation Metrics for Creative Text Generation Tasks in LLMs. 
@@ -89,6 +108,7 @@
                 <p><a href="https://orcid.org/0000-0001-8302-1007" target="_blank">ORCID</a>, <a href="https://github.com/koizachek" target="_blank">GitHub</a>, <a href="https://www.researchgate.net/profile/Diana-Kozachek" target="_blank">ResearchGate</a>, <a href="https://www.instagram.com/koizachek/" target="_blank">Instagram</a>, <a href="https://www.linkedin.com/in/diana-kozachek/" target="_blank">LinkedIn</a></p>
             </ul>
     </header>
+
 
     <main>
         <h2>SCIENTIFIC PUBLICATIONS</h2>
